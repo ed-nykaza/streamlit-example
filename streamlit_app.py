@@ -4,11 +4,9 @@ import pandas as pd
 import streamlit as st
 
 """
-# Welcome to Streamlit!
+# Hi Mindy, This is an example of a deployed Streamlit App.
 
-Edit `/streamlit_app.py` to customize this app to your heart's desire :heart:.
-If you have any questions, checkout our [documentation](https://docs.streamlit.io) and [community
-forums](https://discuss.streamlit.io).
+This is a simple example of a Streamlit app that generates a spiral using the Altair library. And while this has nothing to do with your project, I'm just trying to show you how we can use Streamlit to create a simple app, and it was pretty easy to limit the access to the app to only certain users.
 
 In the meantime, below is an example of what you can do with just a few lines of code:
 """
@@ -23,18 +21,22 @@ radius = indices
 x = radius * np.cos(theta)
 y = radius * np.sin(theta)
 
-df = pd.DataFrame({
-    "x": x,
-    "y": y,
-    "idx": indices,
-    "rand": np.random.randn(num_points),
-})
+df = pd.DataFrame(
+    {
+        "x": x,
+        "y": y,
+        "idx": indices,
+        "rand": np.random.randn(num_points),
+    }
+)
 
-st.altair_chart(alt.Chart(df, height=700, width=700)
+st.altair_chart(
+    alt.Chart(df, height=700, width=700)
     .mark_point(filled=True)
     .encode(
         x=alt.X("x", axis=None),
         y=alt.Y("y", axis=None),
         color=alt.Color("idx", legend=None, scale=alt.Scale()),
         size=alt.Size("rand", legend=None, scale=alt.Scale(range=[1, 150])),
-    ))
+    )
+)
