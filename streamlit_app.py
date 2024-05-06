@@ -4,9 +4,9 @@ import pandas as pd
 import streamlit as st
 
 """
-# Hi Mindy, This is an example of a deployed Streamlit App.
+# This is an example of a deployed Streamlit App.
 
-This is a simple example of a Streamlit app that generates a spiral using the Altair library. And while this has nothing to do with your project, I'm just trying to show you how we can use Streamlit to create a simple app, and it was pretty easy to limit the access to the app to only certain users.
+This is a simple example of a Streamlit app that generates a spiral using the Altair library. And while this has nothing to do with a project, I'm just trying to show you how we can use Streamlit to create a simple app, and it was pretty easy to limit the access to the app to only certain users.
 
 In the meantime, below is an example of what you can do with just a few lines of code:
 """
